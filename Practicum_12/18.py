@@ -1,8 +1,8 @@
 def simmetr(s: str, i: int, j: int) -> bool:
 
-    if i >= j:                 # базовый случай: дошли до середины
+    if i >= j:
         return True
-    if s[i] != s[j]:           # если символы не совпадают
+    if s[i] != s[j]:
         return False
-    return simmetr(s, i + 1, j - 1)  # рекурсивная проверка
+    return simmetr(s, i + 1, j - 1)
 print(simmetr('hjjjjuiiiiu', 5, 10))
