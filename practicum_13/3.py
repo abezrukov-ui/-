@@ -1,4 +1,10 @@
-def task3(sweet: str, friends: list[str]) -> int:
-    sweet_set = set(sweet.split())
-    friends_set = set().union(*[set(f.split()) for f in friends])
-    return len(sweet_set - friends_set)
+sweet_tooth = set(input().split())
+
+n = int(input())
+
+friends_likes = set()
+
+for _ in range(n):
+    friends_likes.update(input().split())
+only_sweet_tooth = sweet_tooth - friends_likes
+print(len(only_sweet_tooth))
